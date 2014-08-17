@@ -13,7 +13,7 @@
 <h2>Comments</h2>
 <div id="comments">
   <% @post.comments.each do |comment| %>
-<%= render partial: "comment" %>
+<%= render partial: @post.comments.reverse %>
     <% end %> 
   </div>
   <%= form_for [@post, Comment.new ], remote: true do |f| %>
